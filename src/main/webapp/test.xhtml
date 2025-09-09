@@ -12,10 +12,17 @@
     </h:head>
     <h:body>
 
-        <h1>#{testView.string}</h1>
-        <h:form id="frmTest">
-
-        </h:form>
+    <h1>#{testView.string}</h1>
+    <h:form id="frmTest">
+        <p:messages/>
+        <h:outputLabel for="datepickerDate" value="DatePicker: invalid value disappears:"/>
+        <p:datePicker id="datepickerDate" value="#{testView.localDate}" keepInvalid="true" showOnFocus="false" showIcon="true"/>
+        <br/>
+        <h:outputLabel for="calendarDate" value="Calendar: invalid value stays:"/>
+        <p:calendar id="calendarDate" value="#{testView.localDate}" showOn="button"/>
+        <br/>
+        <p:commandButton value="Submit" update="@form"/>
+    </h:form>
 
     </h:body>
 </html>

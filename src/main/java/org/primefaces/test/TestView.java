@@ -1,6 +1,7 @@
 package org.primefaces.test;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.math.BigDecimal;
 import jakarta.annotation.PostConstruct;
@@ -19,7 +20,8 @@ public class TestView implements Serializable {
 
     private String string;
     private Integer integer;
-    private BigDecimal decimal;
+    private BigDecimal    decimal;
+    private LocalDate     localDate;
     private LocalDateTime localDateTime;
     private List<TestObject> list;
 
